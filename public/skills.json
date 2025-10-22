@@ -1,0 +1,74 @@
+[
+  {
+    "skillId": 101,
+    "skillName": "Introduction to Python Programming",
+    "providerName": "Dr. Emily Carter",
+    "providerEmail": "emily.carter@techacademy.com",
+    "price": 50,
+    "rating": 4.9,
+    "slotsAvailable": 4,
+    "description": "Learn the basics of Python, covering fundamental syntax, data structures, and simple scripting.",
+    "image": "https://i.postimg.cc/python_intro.png",
+    "category": "Technology"
+  },
+  {
+    "skillId": 102,
+    "skillName": "Digital Photography Fundamentals",
+    "providerName": "Mark Stevens",
+    "providerEmail": "mark.stevens@shutterbug.net",
+    "price": 35,
+    "rating": 4.7,
+    "slotsAvailable": 2,
+    "description": "Master aperture, shutter speed, ISO, and composition for stunning photos.",
+    "image": "https://i.postimg.cc/photo_fund.png",
+    "category": "Arts"
+  },
+  {
+    "skillId": 103,
+    "skillName": "Basic French Conversation",
+    "providerName": "Camille Dubois",
+    "providerEmail": "camille.dubois@lingua.fr",
+    "price": 25,
+    "rating": 4.5,
+    "slotsAvailable": 6,
+    "description": "Essential French phrases and pronunciation practice for travelers and beginners.",
+    "image": "https://i.postimg.cc/french_conv.png",
+    "category": "Language"
+  },
+  {
+    "skillId": 104,
+    "skillName": "Home Baking: Sourdough Starter",
+    "providerName": "Chef Ben Miller",
+    "providerEmail": "ben.miller@bakeathome.org",
+    "price": 45,
+    "rating": 5.0,
+    "slotsAvailable": 1,
+    "description": "A hands-on workshop to create and maintain a healthy sourdough starter from scratch.",
+    "image": "https://i.postimg.cc/sourdough_bake.png",
+    "category": "Cooking"
+  },
+  {
+    "skillId": 105,
+    "skillName": "Yoga for Stress Relief",
+    "providerName": "Priya Sharma",
+    "providerEmail": "priya.sharma@zenflow.in",
+    "price": 15,
+    "rating": 4.8,
+    "slotsAvailable": 8,
+    "description": "Gentle yoga flow and meditation techniques to manage daily stress and improve flexibility.",
+    "image": "https://i.postimg.cc/yoga_relief.png",
+    "category": "Health & Fitness"
+  },
+  {
+    "skillId": 106,
+    "skillName": "Introduction to Financial Budgeting",
+    "providerName": "David Chen, CFA",
+    "providerEmail": "david.chen@financepro.com",
+    "price": 60,
+    "rating": 4.9,
+    "slotsAvailable": 3,
+    "description": "Learn to track income, expenses, and create an effective personal budget for financial stability.",
+    "image": "https://i.postimg.cc/finance_budget.png",
+    "category": "Finance"
+  }
+]
