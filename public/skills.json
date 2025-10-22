@@ -1,51 +1,51 @@
 [
   {
     "skillId": 101,
-    "skillName": "Introduction to Python Programming",
+    "skillName": "Introduction to Python",
     "providerName": "Dr. Emily Carter",
     "providerEmail": "emily.carter@techacademy.com",
     "price": 50,
     "rating": 4.9,
     "slotsAvailable": 4,
     "description": "Learn the basics of Python, covering fundamental syntax, data structures, and simple scripting.",
-    "image": "https://i.postimg.cc/python_intro.png",
+    "image": "https://images.pexels.com/photos/1181405/pexels-photo-1181405.jpeg?_gl=1*18kt3um*_ga*MTIyMTQ0NjIwNi4xNzUzNTQ5MDE2*_ga_8JE65Q40S6*czE3NjExNDI1ODEkbzEyJGcxJHQxNzYxMTQyNzU5JGo1OSRsMCRoMA..",
+    "category": "Technology"
+  },
+  {
+    "skillId": 103,
+    "skillName": "Coding Help",
+    "providerName": "Sophia Lin",
+    "providerEmail": "sophia.lin@codeacademy.org",
+    "price": 30,
+    "rating": 4.6,
+    "slotsAvailable": 5,
+    "description": "An introductory course designed for absolute beginners to learn the core logic of coding using Python and simple projects.",
+    "image": "https://plus.unsplash.com/premium_photo-1714618828448-abf8732500c6?ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&q=80&w=900",
     "category": "Technology"
   },
   {
     "skillId": 102,
-    "skillName": "Digital Photography Fundamentals",
+    "skillName": "Digital Photography",
     "providerName": "Mark Stevens",
     "providerEmail": "mark.stevens@shutterbug.net",
     "price": 35,
-    "rating": 4.7,
+    "rating": 3.5,
     "slotsAvailable": 2,
     "description": "Master aperture, shutter speed, ISO, and composition for stunning photos.",
-    "image": "https://i.postimg.cc/photo_fund.png",
+    "image": "https://images.pexels.com/photos/7698830/pexels-photo-7698830.jpeg?_gl=1*166yc94*_ga*MTIyMTQ0NjIwNi4xNzUzNTQ5MDE2*_ga_8JE65Q40S6*czE3NjExMzgwOTYkbzExJGcxJHQxNzYxMTM5MzM3JGo2JGwwJGgw",
     "category": "Arts"
   },
   {
-    "skillId": 103,
-    "skillName": "Basic French Conversation",
-    "providerName": "Camille Dubois",
-    "providerEmail": "camille.dubois@lingua.fr",
-    "price": 25,
-    "rating": 4.5,
-    "slotsAvailable": 6,
-    "description": "Essential French phrases and pronunciation practice for travelers and beginners.",
-    "image": "https://i.postimg.cc/french_conv.png",
-    "category": "Language"
-  },
-  {
     "skillId": 104,
-    "skillName": "Home Baking: Sourdough Starter",
-    "providerName": "Chef Ben Miller",
-    "providerEmail": "ben.miller@bakeathome.org",
-    "price": 45,
-    "rating": 5.0,
-    "slotsAvailable": 1,
-    "description": "A hands-on workshop to create and maintain a healthy sourdough starter from scratch.",
-    "image": "https://i.postimg.cc/sourdough_bake.png",
-    "category": "Cooking"
+    "skillName": "Spoken English Practice",
+    "providerName": "Sarah Johnson",
+    "providerEmail": "sarah.johnson@linguaskills.org",
+    "price": 40,
+    "rating": 4.8,
+    "slotsAvailable": 5,
+    "description": "Improve your English fluency and pronunciation through interactive speaking exercises and real-life conversation practice.",
+    "image": "https://images.pexels.com/photos/5428013/pexels-photo-5428013.jpeg?_gl=1*wev65w*_ga*MTIyMTQ0NjIwNi4xNzUzNTQ5MDE2*_ga_8JE65Q40S6*czE3NjExNDI1ODEkbzEyJGcxJHQxNzYxMTQzOTYwJGo2MCRsMCRoMA..",
+    "category": "Language"
   },
   {
     "skillId": 105,
@@ -56,19 +56,19 @@
     "rating": 4.8,
     "slotsAvailable": 8,
     "description": "Gentle yoga flow and meditation techniques to manage daily stress and improve flexibility.",
-    "image": "https://i.postimg.cc/yoga_relief.png",
+    "image": "https://images.unsplash.com/photo-1758599879097-ec97c31c05fd?ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1yZWxhdGVkfDJ8fHxlbnwwfHx8fHw%3D&auto=format&fit=crop&q=60&w=500",
     "category": "Health & Fitness"
   },
   {
-    "skillId": 106,
-    "skillName": "Introduction to Financial Budgeting",
-    "providerName": "David Chen, CFA",
-    "providerEmail": "david.chen@financepro.com",
-    "price": 60,
+    "skillId": 107,
+    "skillName": "Guitar Lessons ",
+    "providerName": "Alex Rivera",
+    "providerEmail": "alex.rivera@guitarschool.io",
+    "price": 55,
     "rating": 4.9,
-    "slotsAvailable": 3,
-    "description": "Learn to track income, expenses, and create an effective personal budget for financial stability.",
-    "image": "https://i.postimg.cc/finance_budget.png",
-    "category": "Finance"
+    "slotsAvailable": 6,
+    "description": "Learn the fundamentals of guitar playing — from basic chords and strumming patterns to your first full song. Perfect for absolute beginners.",
+    "image": "https://images.unsplash.com/photo-1511379938547-c1f69419868d?ixlib=rb-4.0.3&auto=format&fit=crop&q=80&w=870",
+    "category": "Music"
   }
 ]

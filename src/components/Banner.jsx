@@ -7,16 +7,6 @@ import "swiper/css/pagination";
 const Banner = () => {
   const slides = [
     {
-      img: "https://images.pexels.com/photos/6925361/pexels-photo-6925361.jpeg?_gl=1*14yl5f4*_ga*MTIyMTQ0NjIwNi4xNzUzNTQ5MDE2*_ga_8JE65Q40S6*czE3NjExMzMwMDAkbzkkZzEkdDE3NjExMzMwMTMkajQ3JGwwJGgw",
-      title: "Master New Skills.",
-      subtitle: "Share Your Talents.",
-    },
-    {
-      img: "https://images.pexels.com/photos/4145355/pexels-photo-4145355.jpeg?_gl=1*fzco7h*_ga*MTIyMTQ0NjIwNi4xNzUzNTQ5MDE2*_ga_8JE65Q40S6*czE3NjExMzMwMDAkbzkkZzEkdDE3NjExMzMwNzkkajQ4JGwwJGgw",
-      title: "Learn Anytime.",
-      subtitle: "Grow Everywhere.",
-    },
-    {
       img: "https://images.pexels.com/photos/5676744/pexels-photo-5676744.jpeg?_gl=1*1aibmk3*_ga*MTIyMTQ0NjIwNi4xNzUzNTQ5MDE2*_ga_8JE65Q40S6*czE3NjExMzMwMDAkbzkkZzEkdDE3NjExMzMwOTMkajM0JGwwJGgw",
       title: "Connect Creatively.",
       subtitle: "Inspire Others.",
@@ -25,6 +15,11 @@ const Banner = () => {
       img: "https://images.pexels.com/photos/6914346/pexels-photo-6914346.jpeg?_gl=1*rqmj2*_ga*MTIyMTQ0NjIwNi4xNzUzNTQ5MDE2*_ga_8JE65Q40S6*czE3NjExMzU3MTMkbzEwJGcxJHQxNzYxMTM1NzM0JGozOSRsMCRoMA..",
       title: "Master New Skills.",
       subtitle: "Share Your Talents.",
+    },
+    {
+      img: "https://images.pexels.com/photos/8117494/pexels-photo-8117494.jpeg?_gl=1*vg45zi*_ga*MTIyMTQ0NjIwNi4xNzUzNTQ5MDE2*_ga_8JE65Q40S6*czE3NjExMzgwOTYkbzExJGcxJHQxNzYxMTM4OTcwJGoyOCRsMCRoMA..",
+      title: "Learn Anytime.",
+      subtitle: "Grow Everywhere.",
     },
   ];
 
