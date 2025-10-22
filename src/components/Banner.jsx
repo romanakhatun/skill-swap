@@ -21,38 +21,48 @@ const Banner = () => {
       title: "Connect Creatively.",
       subtitle: "Inspire Others.",
     },
+    {
+      img: "https://images.pexels.com/photos/6914346/pexels-photo-6914346.jpeg?_gl=1*rqmj2*_ga*MTIyMTQ0NjIwNi4xNzUzNTQ5MDE2*_ga_8JE65Q40S6*czE3NjExMzU3MTMkbzEwJGcxJHQxNzYxMTM1NzM0JGozOSRsMCRoMA..",
+      title: "Master New Skills.",
+      subtitle: "Share Your Talents.",
+    },
   ];
 
   return (
     <div className="w-full mx-auto rounded-2xl overflow-hidden shadow-xl">
       <Swiper
-        modules={[Pagination, EffectFade]}
+        modules={[Pagination, EffectFade, Autoplay]}
         effect="fade"
-        // loop={true}
+        loop={true}
         pagination={{
           clickable: true,
-          bulletClass: "swiper-pagination-bullet !bg-gray-300 !opacity-70",
-          bulletActiveClass: "!bg-primary !opacity-100",
+          bulletClass: "swiper-pagination-bullet !bg-gray-300 !opacity-70 ",
+          bulletActiveClass: "!opacity-100",
         }}
-        // autoplay={{
-        //   delay: 3500,
-        //   disableOnInteraction: false,
-        // }}
+        autoplay={{
+          delay: 3000,
+          disableOnInteraction: false,
+        }}
         className="mySwiper"
       >
         {slides.map((slide, index) => (
           <SwiperSlide key={index}>
             <div
-              className="h-[350px] flex items-center justify-center bg-cover bg-center"
+              className="relative h-[350px] flex items-center justify-start bg-cover bg-center"
               style={{ backgroundImage: `url(${slide.img})` }}
             >
               <div className="absolute inset-0 bg-black/40"></div>
-              <div className="relative z-10 text-center text-white px-4">
-                <h2 className="text-3xl md:text-5xl font-bold">
+              <div className="relative z-10 text-white px-8">
+                <div className="line mb-3"></div>
+                <h2 className="text-3xl md:text-4xl font-bold ">
                   {slide.title}
                 </h2>
-                <p className="text-lg md:text-2xl mt-2">{slide.subtitle}</p>
-                <button className="btn btn-primary mt-6">Explore Nolls</button>
+                <h2 className="text-3xl md:text-4xl font-bold">
+                  {slide.subtitle}
+                </h2>
+                <button className="btn mt-6 rounded-full border-none shadow-none btn-gradient text-white px-8">
+                  Explore Skills
+                </button>
               </div>
             </div>
           </SwiperSlide>

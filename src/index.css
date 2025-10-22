@@ -29,3 +29,13 @@ body {
   padding: 1.5rem;
   border-radius: 20px;
 }
+
+.btn-gradient {
+  background: linear-gradient(90deg, #1fe6d9, #f0925f);
+}
+.line {
+  width: 130px;
+  height: 6px;
+  border-radius: 3px;
+  background: linear-gradient(90deg, #1fe6d9, #a3bfc8);
+}
