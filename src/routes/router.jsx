@@ -12,6 +12,10 @@ export const router = createBrowserRouter([
         element: <Home />,
         loader: () => fetch("/skills.json"),
       },
+      {
+        path: "*",
+        element: <h1>Not Found</h1>,
+      },
     ],
   },
 ]);

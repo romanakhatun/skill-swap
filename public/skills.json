@@ -70,5 +70,29 @@
     "description": "Learn the fundamentals of guitar playing — from basic chords and strumming patterns to your first full song. Perfect for absolute beginners.",
     "image": "https://images.unsplash.com/photo-1511379938547-c1f69419868d?ixlib=rb-4.0.3&auto=format&fit=crop&q=80&w=870",
     "category": "Music"
+  },
+  {
+    "skillId": 101,
+    "skillName": "Introduction to Python",
+    "providerName": "Dr. Emily Carter",
+    "providerEmail": "emily.carter@techacademy.com",
+    "price": 50,
+    "rating": 4.9,
+    "slotsAvailable": 4,
+    "description": "Learn the basics of Python, covering fundamental syntax, data structures, and simple scripting.",
+    "image": "https://images.pexels.com/photos/1181405/pexels-photo-1181405.jpeg?_gl=1*18kt3um*_ga*MTIyMTQ0NjIwNi4xNzUzNTQ5MDE2*_ga_8JE65Q40S6*czE3NjExNDI1ODEkbzEyJGcxJHQxNzYxMTQyNzU5JGo1OSRsMCRoMA..",
+    "category": "Technology"
+  },
+  {
+    "skillId": 103,
+    "skillName": "Coding Help",
+    "providerName": "Sophia Lin",
+    "providerEmail": "sophia.lin@codeacademy.org",
+    "price": 30,
+    "rating": 4.6,
+    "slotsAvailable": 5,
+    "description": "An introductory course designed for absolute beginners to learn the core logic of coding using Python and simple projects.",
+    "image": "https://plus.unsplash.com/premium_photo-1714618828448-abf8732500c6?ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&q=80&w=900",
+    "category": "Technology"
   }
 ]
