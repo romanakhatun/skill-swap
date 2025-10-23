@@ -10,8 +10,10 @@ const MainLayout = () => {
         <Outlet />
       </main>
 
-      <div className="flex-grow h-px bg-gray-300"></div>
-      <Footer />
+      <div className="mt-15">
+        <div className="flex-grow h-px bg-gray-300"></div>
+        <Footer />
+      </div>
     </div>
   );
 };

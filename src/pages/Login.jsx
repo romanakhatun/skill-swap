@@ -3,12 +3,11 @@ import { Link, useLocation, useNavigate } from "react-router";
 import { AuthContext } from "../contexts/AuthContext";
 import { toast, Toaster } from "react-hot-toast";
 import { FaEye, FaEyeSlash } from "react-icons/fa";
-import { FcGoogle } from "react-icons/fc";
 import SocialSignIn from "../components/SocialSignIn";
 
 const Login = () => {
   const [showPass, setShowPass] = useState(true);
-  const { signInUser, resetPassword } = use(AuthContext);
+  const { signInUser } = use(AuthContext);
   const emailRef = useRef();
   const location = useLocation();
   const navigate = useNavigate();
@@ -36,28 +35,9 @@ const Login = () => {
       });
   };
 
-  const handleResetPassword = () => {
-    const email = emailRef.current.value;
-    console.log(email);
-
-    if (!email) {
-      toast.error("Please enter your email first!", {
-        duration: 3000,
-      });
-      return;
-    }
-
-    resetPassword(email)
-      .then(() => {
-        toast.success("Password reset email sent!", {
-          duration: 3000,
-        });
-      })
-      .catch((err) => {
-        toast.error(err.message, {
-          duration: 3000,
-        });
-      });
+  const handleForgetPassNavigate = () => {
+    const email = emailRef.current?.value || "";
+    navigate("/forget-password", { state: { email } });
   };
 
   return (
@@ -119,8 +99,8 @@ const Login = () => {
             {/* Forgot Password */}
             <div className="flex justify-between items-center text-sm">
               <p
-                onClick={handleResetPassword}
                 className="text-blue-600 hover:underline cursor-pointer"
+                onClick={handleForgetPassNavigate}
               >
                 Forgot Password?
               </p>
