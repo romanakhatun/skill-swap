@@ -1,20 +1,17 @@
 import { useContext } from "react";
 import { AuthContext } from "../contexts/AuthContext";
-import { FaUserCircle, FaEnvelope, FaEdit } from "react-icons/fa";
-import { toast } from "react-hot-toast";
+import { FaUserCircle, FaEdit } from "react-icons/fa";
 import admin from "../assets/admin.png";
+import { Link } from "react-router";
+import { MdOutlineMail } from "react-icons/md";
 
 const MyProfile = () => {
   const { user } = useContext(AuthContext);
 
-  const handleUpdateProfile = () => {
-    toast.success("Profile update feature coming soon!");
-  };
-
   return (
     <>
       <title>{`Skill Swap | My profile`}</title>
-      <div className="min-h-screen flex items-center justify-center p-6">
+      <div className="flex items-center justify-center p-6">
         <div className="card w-full ">
           <div className="flex flex-col items-center text-center space-y-4">
             {user?.photoURL ? (
@@ -32,18 +29,18 @@ const MyProfile = () => {
                 {user?.displayName || "Anonymous User"}
               </h2>
               <p className="text-gray-600 flex items-center justify-center gap-2">
-                <FaEnvelope className="text-gray-800" />
+                <MdOutlineMail />
                 {user?.email || "No Email Provided"}
               </p>
             </div>
 
-            <div
-              onClick={handleUpdateProfile}
+            <Link
+              to={"/update-profile"}
               className="btn btn-primary mt-4 flex items-center gap-2"
             >
               <FaEdit />
               Update Profile
-            </div>
+            </Link>
           </div>
         </div>
       </div>

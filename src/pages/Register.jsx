@@ -67,15 +67,13 @@ const Register = () => {
           photoURL: photo,
         };
 
-        updateProfile(result.user, profile)
-          .then(() => {})
-          .catch(() => {});
+        updateProfile(result.user, profile);
 
         // redirect after Register
         navigate(location.state || "/");
       })
       .catch((err) => {
-        toast.error(err.message || "Registration Failed ⚠️", {
+        toast.error(err.message || "Registration Failed", {
           duration: 3000,
           position: "top-right",
         });

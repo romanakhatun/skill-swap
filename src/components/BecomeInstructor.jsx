@@ -14,7 +14,7 @@ const BecomeInstructor = () => {
       </div>
 
       <button className="btn btn-primary px-6 py-1 rounded-lg">
-        Drop Information
+        Share Your Expertise
         <FaArrowRightLong className="ml-2" />
       </button>
     </div>
