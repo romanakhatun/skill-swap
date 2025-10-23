@@ -46,96 +46,86 @@ const Register = () => {
       });
   };
   return (
-    <div className="place-items-center pb-30">
-      <div className="card p-10 rounded-xl w-full shadow-lg max-w-md lg:max-w-lg">
-        <div className="py-10 px-10">
-          <h1 className="text-primary-accent text-2xl font-semibold">
-            Join SkillSwap
-          </h1>
-          <div className="border-b border-[#2c3e502a] my-5"></div>
+    <div className="flex justify-center items-center min-h-screen bg-base-200">
+      <div className="card rounded-xl shadow-lg w-full max-w-md bg-base-100 p-8">
+        <h1 className="text-primary text-2xl font-semibold mb-4">
+          Join SkillSwap
+        </h1>
+        <div className="border-b border-base-300 mb-6"></div>
 
-          <form onSubmit={handleRegister}>
-            <fieldset className="fieldset space-y-5">
-              <div className="space-y-2">
-                <label className="label text-primary-accent font-semibold text-sm">
-                  Your Name
-                </label>
-                <input
-                  type="text"
-                  name="name"
-                  required
-                  className="input w-full bg-base-300 border-0 shadow-none focus:outline-0 px-4"
-                  placeholder="Enter your name"
-                />
-              </div>
-              <div className="space-y-3">
-                <label className="label text-primary-accent font-semibold text-sm">
-                  Photo URL
-                </label>
-                <input
-                  type="text"
-                  name="photo"
-                  required
-                  className="input w-full bg-base-300 border-0 shadow-none focus:outline-0  px-4"
-                  placeholder="Enter your Photo URL"
-                />
-              </div>
-              <div className="space-y-3">
-                <label className="label text-primary-accent font-semibold text-sm">
-                  Email address
-                </label>
-                <input
-                  type="email"
-                  name="email"
-                  required
-                  className="input w-full bg-base-300 border-0 shadow-none focus:outline-0  px-4"
-                  placeholder="Enter your email address"
-                />
-              </div>
-              <div className="space-y-3">
-                <label className="label text-primary-accent font-semibold text-sm">
-                  Password
-                </label>
-                <input
-                  type="password"
-                  name="password"
-                  required
-                  className="input w-full bg-base-300 border-0 shadow-none focus:outline-0 px-4"
-                  placeholder="Enter your password"
-                />
-              </div>
-              <div>
-                <label className="label">
-                  <input
-                    type="checkbox"
-                    name="terms"
-                    className="checkbox checkbox-xs rounded"
-                  />
-                  Accept <strong>Terms & Condition</strong>
-                </label>
-              </div>
-              <button className="btn btn-primary shadow-none border-0">
-                Register
-              </button>
-            </fieldset>
-            {success && (
-              <p className="text-green-500 mt-4 text-center">
-                Successfully Created Account
-              </p>
-            )}
+        <form onSubmit={handleRegister} className="space-y-5">
+          {/* Input Fields */}
+          <div>
+            <label className="label text-sm font-semibold">Your Name</label>
+            <input
+              type="text"
+              name="name"
+              required
+              className="input input-bordered w-full bg-base-200"
+              placeholder="Enter your name"
+            />
+          </div>
 
-            {error && <p className="text-red-600 mt-4 text-center">{error}</p>}
+          <div>
+            <label className="label text-sm font-semibold">Photo URL</label>
+            <input
+              type="text"
+              name="photo"
+              required
+              className="input input-bordered w-full bg-base-200"
+              placeholder="Enter your Photo URL"
+            />
+          </div>
 
-            <div>
-              <p className="text-center text-primary-accent mt-4 font-semibold">
-                Have An Account ?
-                <Link className="text-[#F75B5F]" to="/login">
-                  Login
-                </Link>
-              </p>
-            </div>
-          </form>
-        </div>
+          <div>
+            <label className="label text-sm font-semibold">Email address</label>
+            <input
+              type="email"
+              name="email"
+              required
+              className="input input-bordered w-full bg-base-200"
+              placeholder="Enter your email address"
+            />
+          </div>
+
+          <div>
+            <label className="label text-sm font-semibold">Password</label>
+            <input
+              type="password"
+              name="password"
+              required
+              className="input input-bordered w-full bg-base-200"
+              placeholder="Enter your password"
+            />
+          </div>
+
+          <div className="flex items-center gap-2">
+            <input
+              type="checkbox"
+              name="terms"
+              className="checkbox rounded-sm checkbox-primary checkbox-xs"
+            />
+            <span className="text-sm">
+              Accept <strong>Terms & Condition</strong>
+            </span>
+          </div>
+
+          <button className="btn btn-primary w-full">Register</button>
+
+          {success && (
+            <p className="text-green-500 text-center">
+              Successfully Created Account
+            </p>
+          )}
+          {error && <p className="text-red-600 text-center">{error}</p>}
+
+          <p className="text-center mt-4 text-sm">
+            Have an account?{" "}
+            <Link to="/login" className="text-primary font-semibold">
+              Login
+            </Link>
+          </p>
+        </form>
       </div>
     </div>
   );
