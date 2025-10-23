@@ -1,6 +1,7 @@
 import Banner from "../components/Banner";
 import { HowItWorks } from "../components/HowItWorks";
 import PopularSkills from "../components/PopularSkills";
+import TopRatedProviders from "../components/TopRatedProviders";
 
 const Home = () => {
   return (
@@ -12,6 +13,7 @@ const Home = () => {
         <PopularSkills />
       </div>
       {/* <HowItWorks /> */}
+      <TopRatedProviders />
     </>
   );
 };

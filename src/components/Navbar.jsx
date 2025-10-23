@@ -1,10 +1,10 @@
 import { use } from "react";
 import { NavLink } from "react-router";
 import { AuthContext } from "../contexts/AuthContext";
-import logo from "../assets/logo.png";
 import { FiLogOut } from "react-icons/fi";
 import { GoPerson } from "react-icons/go";
 import admin from "../assets/admin.png";
+import Logo from "./Logo";
 
 const Navbar = () => {
   const { user, signOutUser } = use(AuthContext);
@@ -18,13 +18,7 @@ const Navbar = () => {
   return (
     <div className="flex justify-between items-center">
       {/* Logo */}
-      <div className="flex items-center gap-1">
-        <img className="w-[30px]" src={logo} alt="SkillSwap Logo" />
-        <h1 className="text-[#2d447a] font-bold text-2xl pt-1">
-          Ski<span className="text-[#178790]">ll</span>
-          <span className="text-[#e79c4e]">Swap</span>
-        </h1>
-      </div>
+      <Logo />
 
       {/* Navigation */}
       <nav>
@@ -59,7 +53,7 @@ const Navbar = () => {
                   tabIndex={0}
                   className="dropdown-content z-[11] menu bg-base-100 rounded-box w-52 border border-base-300"
                 >
-                  <li className="font-semibold text-[17px] text-gray-600 mb-2 border-b border-base-300 pb-2">
+                  <li className="font-semibold text-[17px] text-gray-600 mx-2 my-2 border-b border-base-300 pb-2">
                     My Account
                   </li>
 

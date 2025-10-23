@@ -5,27 +5,35 @@ import {
   FaPhone,
   FaEnvelope,
 } from "react-icons/fa";
+import Logo from "./Logo";
 
 const Footer = () => {
   return (
-    <footer className="bg-neutral text-neutral-content pt-10">
+    <footer className="text-primary-accent pt-10">
       <div className="container mx-auto px-4">
-        <div className="footer border-b border-neutral-content/10 pb-8 grid grid-cols-3">
+        <div className="footer border-b border-neutral-content/10 pb-8 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4">
+          <div>
+            <Logo />
+            <p className="text-sm text-gray-500 max-w-xs">
+              Learn. Teach. Grow — Together on SkillSwap.
+            </p>
+          </div>
+
+          {/* Privacy Policy */}
           <nav>
-            <h6 className="footer-title text-primary-accent">
-              Skill Categories
-            </h6>
-            <a className="link link-hover">Music & Arts</a>
-            <a className="link link-hover">Tech & Coding</a>
-            <a className="link link-hover">Language Exchange</a>
-            <a className="link link-hover">Health & Wellness</a>
+            <h6 className="footer-title text-primary-accent">Company</h6>
+            <a className="link link-hover">About Us</a>
+            <a className="link link-hover">Privacy Policy</a>
+            <a className="link link-hover">Terms of Service</a>
+            <a className="link link-hover">Cookie Policy</a>
           </nav>
 
+          {/* Contact Info */}
           <nav>
             <h6 className="footer-title text-primary-accent">Contact Info</h6>
             <a className="link link-hover flex items-center">
               <FaEnvelope className="mr-2" />
-              support@skillswap.com
+              romana2004@gmail.com
             </a>
             <a className="link link-hover flex items-center">
               <FaPhone className="mr-2" />
@@ -34,50 +42,34 @@ const Footer = () => {
             <a className="link link-hover">Local Area: New York, USA</a>
           </nav>
 
+          {/* Social Links */}
           <nav>
-            <h6 className="footer-title text-primary-accent">Company</h6>
-            <a className="link link-hover">About Us</a>
-            <a className="link link-hover">Privacy Policy</a>
-            <a className="link link-hover">Terms of Service</a>
-            <a className="link link-hover">Cookie Policy</a>
+            <h6 className="footer-title text-primary-accent">Social Links</h6>
+            <div className="grid grid-flow-col gap-3">
+              <a href="https://twitter.com" className="text-2xl text-[#e79c4e]">
+                <FaTwitter />
+              </a>
+              <a
+                href="https://facebook.com"
+                className="text-2xl text-[#e79c4e]"
+              >
+                <FaFacebook />
+              </a>
+              <a
+                href="https://instagram.com"
+                className="text-2xl text-[#e79c4e]"
+              >
+                <FaInstagram />
+              </a>
+            </div>
           </nav>
         </div>
-
-        <div className="footer py-6 border-t border-neutral-content/10 md:flex-row flex-col-reverse justify-between items-center">
-          <aside className="text-sm opacity-80 mt-4 md:mt-0">
-            <p>
-              Copyright © {new Date().getFullYear()} - SkillSwap Inc. All rights
-              reserved.
-            </p>
-          </aside>
-
-          <nav className="grid grid-flow-col gap-4">
-            <a
-              href="https://twitter.com"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="text-2xl hover:text-primary-accent transition-colors"
-            >
-              <FaTwitter />
-            </a>
-            <a
-              href="https://facebook.com"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="text-2xl hover:text-primary-accent transition-colors"
-            >
-              <FaFacebook />
-            </a>
-            <a
-              href="https://instagram.com"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="text-2xl hover:text-primary-accent transition-colors"
-            >
-              <FaInstagram />
-            </a>
-          </nav>
-        </div>
+      </div>
+      <div className="text-center">
+        <p className="text-sm opacity-80 mt-6">
+          Copyright © {new Date().getFullYear()} - SkillSwap Inc. All rights
+          reserved.
+        </p>
       </div>
     </footer>
   );

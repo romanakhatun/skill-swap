@@ -3,7 +3,6 @@ import SkillCard from "./SkillCard";
 
 const PopularSkills = () => {
   const data = useLoaderData();
-  // console.log(data);
 
   return (
     <>

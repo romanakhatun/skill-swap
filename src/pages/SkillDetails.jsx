@@ -130,7 +130,7 @@ const SkillDetails = () => {
         <h3 className="text-xl font-semibold text-primary mb-4">
           Enroll in {skillName}
         </h3>
-        <form onSubmit={handleEnroll} className="space-y-4">
+        <form onSubmit={handleEnroll} className="space-y-4 mr-8">
           <div>
             <label className="label text-sm font-semibold">
               Name <span className="text-red-500">*</span>

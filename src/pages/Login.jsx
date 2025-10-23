@@ -61,93 +61,96 @@ const Login = () => {
   };
 
   return (
-    <div className="flex justify-center items-center mt-15">
-      <div className="w-full bg-base-100 max-w-md rounded-xl p-10 border border-base-300">
-        <Toaster
-          containerStyle={{
-            top: 100,
-            right: 50,
-          }}
-          reverseOrder={false}
-        />
-        <h1 className="text-primary text-2xl font-semibold mb-4">
-          Login to SkillSwap
-        </h1>
-        <div className="border-b border-base-300 mb-6"></div>
+    <>
+      <title>{`Skill Swap | Login to SkillSwap`}</title>
+      <div className="flex justify-center items-center mt-15">
+        <div className="w-full bg-base-100 max-w-md rounded-xl p-10 border border-base-300">
+          <Toaster
+            containerStyle={{
+              top: 100,
+              right: 50,
+            }}
+            reverseOrder={false}
+          />
+          <h1 className="text-primary text-2xl font-semibold mb-4">
+            Login to SkillSwap
+          </h1>
+          <div className="border-b border-base-300 mb-6"></div>
 
-        <form onSubmit={handleSignIn} className="space-y-5 mr-8">
-          {/* Email Field */}
-          <div>
-            <label className="label text-primary-accent font-semibold text-sm">
-              Email address
-            </label>
-            <input
-              type="email"
-              name="email"
-              ref={emailRef}
-              required
-              className="input input-bordered w-full bg-base-200"
-              placeholder="Enter your email address"
-            />
-          </div>
-
-          {/* Password Field */}
-          <div>
-            <label className="label text-primary-accent font-semibold text-sm">
-              Password
-            </label>
-
-            <label className="input w-full bg-base-200">
+          <form onSubmit={handleSignIn} className="space-y-5 mr-8">
+            {/* Email Field */}
+            <div>
+              <label className="label text-primary-accent font-semibold text-sm">
+                Email address
+              </label>
               <input
-                type={showPass ? "text" : "password"}
-                name="password"
+                type="email"
+                name="email"
+                ref={emailRef}
                 required
-                placeholder="Enter your password"
+                className="input input-bordered w-full bg-base-200"
+                placeholder="Enter your email address"
               />
+            </div>
 
-              <span
-                onClick={() => setShowPass(!showPass)}
-                className="cursor-pointer"
+            {/* Password Field */}
+            <div>
+              <label className="label text-primary-accent font-semibold text-sm">
+                Password
+              </label>
+
+              <label className="input w-full bg-base-200">
+                <input
+                  type={showPass ? "text" : "password"}
+                  name="password"
+                  required
+                  placeholder="Enter your password"
+                />
+
+                <span
+                  onClick={() => setShowPass(!showPass)}
+                  className="cursor-pointer"
+                >
+                  {showPass ? <FaEyeSlash /> : <FaEye />}
+                </span>
+              </label>
+            </div>
+
+            {/* Forgot Password */}
+            <div className="flex justify-between items-center text-sm">
+              <p
+                onClick={handleResetPassword}
+                className="text-blue-600 hover:underline cursor-pointer"
               >
-                {showPass ? <FaEyeSlash /> : <FaEye />}
-              </span>
-            </label>
+                Forgot Password?
+              </p>
+            </div>
+
+            {/* Login Button */}
+            <button className="btn btn-primary w-full shadow-none border-0">
+              Login
+            </button>
+          </form>
+
+          {/* Divider */}
+          <div className="flex items-center my-4">
+            <div className="flex-grow h-px bg-gray-300"></div>
+            <span className="px-3 text-gray-500 text-sm">or</span>
+            <div className="flex-grow h-px bg-gray-300"></div>
           </div>
 
-          {/* Forgot Password */}
-          <div className="flex justify-between items-center text-sm">
-            <p
-              onClick={handleResetPassword}
-              className="text-blue-600 hover:underline cursor-pointer"
-            >
-              Forgot Password?
-            </p>
-          </div>
+          <SocialSignIn />
 
-          {/* Login Button */}
-          <button className="btn btn-primary w-full shadow-none border-0">
-            Login
-          </button>
-        </form>
-
-        {/* Divider */}
-        <div className="flex items-center my-4">
-          <div className="flex-grow h-px bg-gray-300"></div>
-          <span className="px-3 text-gray-500 text-sm">or</span>
-          <div className="flex-grow h-px bg-gray-300"></div>
+          {/* Register Link */}
+          <p className="text-center text-sm">
+            Don’t Have An Account?
+            <Link to="/register" className="text-primary font-semibold">
+              Register
+            </Link>
+          </p>
         </div>
-
-        <SocialSignIn />
-
-        {/* Register Link */}
-        <p className="text-center text-sm">
-          Don’t Have An Account?
-          <Link to="/register" className="text-primary font-semibold">
-            Register
-          </Link>
-        </p>
       </div>
-    </div>
+    </>
   );
 };
 
