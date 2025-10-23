@@ -2,6 +2,7 @@ import { useContext } from "react";
 import { AuthContext } from "../contexts/AuthContext";
 import { FaUserCircle, FaEnvelope, FaEdit } from "react-icons/fa";
 import { toast } from "react-hot-toast";
+import admin from "../assets/admin.png";
 
 const MyProfile = () => {
   const { user } = useContext(AuthContext);
@@ -16,7 +17,7 @@ const MyProfile = () => {
         <div className="flex flex-col items-center text-center space-y-4">
           {user?.photoURL ? (
             <img
-              src={user.photoURL}
+              src={user?.photoURL || admin}
               alt="User Avatar"
               className="w-28 h-28 rounded-full object-cover border-4 border-blue-400 shadow-md "
             />

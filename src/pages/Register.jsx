@@ -4,6 +4,7 @@ import { updateProfile } from "firebase/auth";
 import { AuthContext } from "../contexts/AuthContext";
 import toast, { Toaster } from "react-hot-toast";
 import { FaEye, FaEyeSlash } from "react-icons/fa";
+import SocialSignIn from "../components/SocialSignIn";
 
 const Register = () => {
   const [showPass, setShowPass] = useState(true);
@@ -70,6 +71,7 @@ const Register = () => {
           .then(() => {})
           .catch(() => {});
 
+        // redirect after Register
         navigate(location.state || "/");
       })
       .catch((err) => {
@@ -165,16 +167,24 @@ const Register = () => {
               Accept <strong>Terms & Condition</strong>
             </span>
           </div>
-
           <button className="btn btn-primary w-full">Register</button>
-
-          <p className="text-center text-sm">
-            Have an account?
-            <Link to="/login" className="text-primary font-semibold">
-              Login
-            </Link>
-          </p>
         </form>
+
+        {/* Divider */}
+        <div className="flex items-center my-4">
+          <div className="flex-grow h-px bg-gray-300"></div>
+          <span className="px-3 text-gray-500 text-sm">or</span>
+          <div className="flex-grow h-px bg-gray-300"></div>
+        </div>
+
+        <SocialSignIn />
+
+        <p className="text-center text-sm">
+          Have an account?
+          <Link to="/login" className="text-primary font-semibold">
+            Login
+          </Link>
+        </p>
       </div>
     </div>
   );

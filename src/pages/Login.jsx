@@ -3,6 +3,8 @@ import { Link, useLocation, useNavigate } from "react-router";
 import { AuthContext } from "../contexts/AuthContext";
 import { toast, Toaster } from "react-hot-toast";
 import { FaEye, FaEyeSlash } from "react-icons/fa";
+import { FcGoogle } from "react-icons/fc";
+import SocialSignIn from "../components/SocialSignIn";
 
 const Login = () => {
   const [showPass, setShowPass] = useState(true);
@@ -23,6 +25,7 @@ const Login = () => {
           duration: 3000,
           position: "top-right",
         });
+        // redirect after login
         navigate(location.state || "/");
       })
       .catch((err) => {
@@ -125,15 +128,24 @@ const Login = () => {
           <button className="btn btn-primary w-full shadow-none border-0">
             Login
           </button>
-
-          {/* Register Link */}
-          <p className="text-center text-sm">
-            Don’t Have An Account?
-            <Link to="/register" className="text-primary font-semibold">
-              Register
-            </Link>
-          </p>
         </form>
+
+        {/* Divider */}
+        <div className="flex items-center my-4">
+          <div className="flex-grow h-px bg-gray-300"></div>
+          <span className="px-3 text-gray-500 text-sm">or</span>
+          <div className="flex-grow h-px bg-gray-300"></div>
+        </div>
+
+        <SocialSignIn />
+
+        {/* Register Link */}
+        <p className="text-center text-sm">
+          Don’t Have An Account?
+          <Link to="/register" className="text-primary font-semibold">
+            Register
+          </Link>
+        </p>
       </div>
     </div>
   );
