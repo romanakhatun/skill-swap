@@ -9,7 +9,7 @@ export const HowItWorks = () => {
         How It Works
       </h2>
 
-      <div className="flex gap-4">
+      <div className="flex gap-6 flex-col sm:flex-row">
         {/* Step 1 */}
         <div className="flex flex-col items-center">
           <div className="w-14 h-14 rounded-xl bg-purple-400 flex items-center justify-center shadow-lg text-white">
@@ -21,7 +21,7 @@ export const HowItWorks = () => {
         </div>
 
         {/* Dotted Line */}
-        <div className="flex items-center">
+        <div className="hidden md:flex items-center ">
           <div className="w-3 h-3 bg-purple-400 rounded-full"></div>
           <div className="w-24 border-t border-dashed border-gray-300"></div>
           <div className="w-3 h-3 bg-cyan-400 rounded-full"></div>
@@ -39,7 +39,7 @@ export const HowItWorks = () => {
         </div>
 
         {/* Dotted Line */}
-        <div className="flex items-center">
+        <div className="hidden md:flex items-center">
           <div className="w-3 h-3 bg-cyan-400 rounded-full"></div>
           <div className="w-24 border-t border-dashed border-gray-300"></div>
           <div className="w-3 h-3 bg-purple-400 rounded-full"></div>
