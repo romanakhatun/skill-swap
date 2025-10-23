@@ -8,8 +8,9 @@
 @plugin "daisyui/theme" {
   name: "light";
   default: true;
-  --color-primary-accent: #00c4cc;
-  --color-secondary-accent: #ff7f66;
+  --color-primary: #2d447a;
+  --color-primary-accent: #2c3e50;
+  --color-secondary: #1fe6d9;
   --color-dark-bg: #2c3e50;
   --color-main-bg: #f5f7fa;
   --color-accent: #ffc300;
@@ -23,7 +24,7 @@
 
 body {
   font-family: "Montserrat", sans-serif;
-  background: #cce0e9;
+  background: #f7fafc;
   max-width: 1200px;
   margin: 25px auto;
   padding: 1.5rem;

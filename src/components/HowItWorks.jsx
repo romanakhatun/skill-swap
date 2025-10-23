@@ -36,7 +36,7 @@ export const HowItWorks = () => {
             key={index}
             className="flex flex-col items-center text-center relative"
           >
-            <div className="flex items-center justify-center w-16 h-16 rounded-full bg-white shadow-md border border-gray-200">
+            <div className="flex items-center justify-center w-16 h-16 rounded-full border border-gray-200">
               {step.icon}
             </div>
             <h3 className="mt-4 text-gray-800 font-semibold">{step.title}</h3>

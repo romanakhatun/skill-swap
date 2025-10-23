@@ -12,7 +12,7 @@
     "category": "Technology"
   },
   {
-    "skillId": 103,
+    "skillId": 102,
     "skillName": "Coding Help",
     "providerName": "Sophia Lin",
     "providerEmail": "sophia.lin@codeacademy.org",
@@ -24,7 +24,7 @@
     "category": "Technology"
   },
   {
-    "skillId": 102,
+    "skillId": 103,
     "skillName": "Digital Photography",
     "providerName": "Mark Stevens",
     "providerEmail": "mark.stevens@shutterbug.net",
@@ -60,7 +60,7 @@
     "category": "Health & Fitness"
   },
   {
-    "skillId": 107,
+    "skillId": 106,
     "skillName": "Guitar Lessons ",
     "providerName": "Alex Rivera",
     "providerEmail": "alex.rivera@guitarschool.io",
@@ -72,7 +72,7 @@
     "category": "Music"
   },
   {
-    "skillId": 101,
+    "skillId": 107,
     "skillName": "Introduction to Python",
     "providerName": "Dr. Emily Carter",
     "providerEmail": "emily.carter@techacademy.com",
@@ -84,7 +84,7 @@
     "category": "Technology"
   },
   {
-    "skillId": 103,
+    "skillId": 108,
     "skillName": "Coding Help",
     "providerName": "Sophia Lin",
     "providerEmail": "sophia.lin@codeacademy.org",
