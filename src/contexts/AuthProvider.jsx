@@ -3,6 +3,7 @@ import {
   GithubAuthProvider,
   GoogleAuthProvider,
   onAuthStateChanged,
+  sendPasswordResetEmail,
   signInWithEmailAndPassword,
   signInWithPopup,
   signOut,
@@ -26,6 +27,11 @@ const AuthProvider = ({ children }) => {
   const signInUser = (email, password) => {
     setLoading(true);
     return signInWithEmailAndPassword(auth, email, password);
+  };
+
+  const resetPassword = (email) => {
+    setLoading(true);
+    return sendPasswordResetEmail(auth, email);
   };
 
   const signInGoogleUser = () => {
@@ -61,6 +67,7 @@ const AuthProvider = ({ children }) => {
     // createUser: createUser, or
     createUser,
     signInUser,
+    resetPassword,
     signInGoogleUser,
     signInGithubUser,
     signOutUser,

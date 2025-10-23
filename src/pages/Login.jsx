@@ -1,60 +1,78 @@
-import { use, useState } from "react";
+import { use, useRef, useState } from "react";
 import { Link, useLocation, useNavigate } from "react-router";
 import { AuthContext } from "../contexts/AuthContext";
-import { sendPasswordResetEmail } from "firebase/auth";
-import { toast } from "react-hot-toast";
+import { toast, Toaster } from "react-hot-toast";
+import { FaEye, FaEyeSlash } from "react-icons/fa";
 
 const Login = () => {
-  const [error, setError] = useState("");
-  const [resetEmail, setResetEmail] = useState("");
+  const [showPass, setShowPass] = useState(true);
+  const { signInUser, resetPassword } = use(AuthContext);
+  const emailRef = useRef();
   const location = useLocation();
   const navigate = useNavigate();
-
-  const { signInUser, auth } = use(AuthContext);
 
   const handleSignIn = (e) => {
     e.preventDefault();
     const email = e.target.email.value;
     const password = e.target.password.value;
 
-    setError("");
-
     signInUser(email, password)
       .then((result) => {
         console.log(result.user);
-        toast.success("Login successful!");
+        toast.success("Login successful!", {
+          duration: 3000,
+          position: "top-right",
+        });
         navigate(location.state || "/");
       })
       .catch((err) => {
-        setError(err.message);
-        toast.error("Invalid email or password!");
+        toast.error(err.message || "Login Failed", {
+          duration: 3000,
+          position: "top-right",
+        });
       });
   };
 
   const handleResetPassword = () => {
-    if (!resetEmail) {
-      toast.error("Please enter your email first!");
+    const email = emailRef.current.value;
+    console.log(email);
+
+    if (!email) {
+      toast.error("Please enter your email first!", {
+        duration: 3000,
+      });
       return;
     }
 
-    sendPasswordResetEmail(auth, resetEmail)
+    resetPassword(email)
       .then(() => {
-        toast.success("Password reset email sent!");
+        toast.success("Password reset email sent!", {
+          duration: 3000,
+        });
       })
       .catch((err) => {
-        toast.error(err.message);
+        toast.error(err.message, {
+          duration: 3000,
+        });
       });
   };
 
   return (
-    <div className="flex justify-center items-center min-h-screen bg-base-200">
-      <div className="card w-full bg-base-100 max-w-md shadow-lg rounded-xl p-10">
+    <div className="flex justify-center items-center mt-15">
+      <div className="w-full bg-base-100 max-w-md rounded-xl p-10 border border-base-300">
+        <Toaster
+          containerStyle={{
+            top: 100,
+            right: 50,
+          }}
+          reverseOrder={false}
+        />
         <h1 className="text-primary text-2xl font-semibold mb-4">
           Login to SkillSwap
         </h1>
         <div className="border-b border-base-300 mb-6"></div>
 
-        <form onSubmit={handleSignIn} className="space-y-5">
+        <form onSubmit={handleSignIn} className="space-y-5 mr-8">
           {/* Email Field */}
           <div>
             <label className="label text-primary-accent font-semibold text-sm">
@@ -63,10 +81,10 @@ const Login = () => {
             <input
               type="email"
               name="email"
+              ref={emailRef}
               required
               className="input input-bordered w-full bg-base-200"
               placeholder="Enter your email address"
-              onChange={(e) => setResetEmail(e.target.value)}
             />
           </div>
 
@@ -75,13 +93,22 @@ const Login = () => {
             <label className="label text-primary-accent font-semibold text-sm">
               Password
             </label>
-            <input
-              type="password"
-              name="password"
-              required
-              className="input input-bordered w-full bg-base-200"
-              placeholder="Enter your password"
-            />
+
+            <label className="input w-full bg-base-200">
+              <input
+                type={showPass ? "text" : "password"}
+                name="password"
+                required
+                placeholder="Enter your password"
+              />
+
+              <span
+                onClick={() => setShowPass(!showPass)}
+                className="cursor-pointer"
+              >
+                {showPass ? <FaEyeSlash /> : <FaEye />}
+              </span>
+            </label>
           </div>
 
           {/* Forgot Password */}
@@ -99,15 +126,10 @@ const Login = () => {
             Login
           </button>
 
-          {/* Error Message */}
-          {error && (
-            <p className="text-red-600 text-center mt-2 font-medium">{error}</p>
-          )}
-
           {/* Register Link */}
-          <p className="text-center text-primary-accent mt-4 font-semibold">
-            Don’t Have An Account?{" "}
-            <Link className="text-[#F75B5F]" to="/register">
+          <p className="text-center text-sm">
+            Don’t Have An Account?
+            <Link to="/register" className="text-primary font-semibold">
               Register
             </Link>
           </p>
