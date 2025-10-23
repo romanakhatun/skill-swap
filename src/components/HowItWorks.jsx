@@ -1,54 +1,60 @@
-import { FaSearch, FaGlobe, FaLightbulb, FaUpload } from "react-icons/fa";
+import { CiSearch } from "react-icons/ci";
+import { FaRegLightbulb } from "react-icons/fa";
+import { PiSwapDuotone } from "react-icons/pi";
 
 export const HowItWorks = () => {
-  const steps = [
-    {
-      icon: <FaSearch className="text-3xl text-blue-700" />,
-      title: "Browse & Discover",
-      subtitle: "Explore resources",
-    },
-    {
-      icon: <FaGlobe className="text-3xl text-blue-700" />,
-      title: "Connect & Learn",
-      subtitle: "",
-    },
-    {
-      icon: <FaLightbulb className="text-3xl text-blue-700" />,
-      title: "Share & Grow",
-      subtitle: "",
-    },
-    {
-      icon: <FaUpload className="text-3xl text-orange-500" />,
-      title: "Share & Grow",
-      subtitle: "",
-    },
-  ];
-
   return (
-    <section className="py-12 px-4">
-      <h2 className="text-2xl md:text-3xl font-semibold text-[#2C3E50] mb-4">
+    <section className="flex flex-col items-center justify-center py-10">
+      <h2 className="text-2xl md:text-3xl font-semibold text-[#2C3E50] mb-15 mt-5">
         How It Works
       </h2>
 
-      <div className="flex flex-col md:flex-row items-center justify-between space-y-8 md:space-y-0 relative">
-        {steps.map((step, index) => (
-          <div
-            key={index}
-            className="flex flex-col items-center text-center relative"
-          >
-            <div className="flex items-center justify-center w-16 h-16 rounded-full border border-gray-200">
-              {step.icon}
-            </div>
-            <h3 className="mt-4 text-gray-800 font-semibold">{step.title}</h3>
-            {step.subtitle && (
-              <p className="text-sm text-gray-500">{step.subtitle}</p>
-            )}
-
-            {/* {index < steps.length - 1 && (
-                <div className="hidden md:block absolute top-8 right-[-50%] w-full h-[2px] bg-gray-300"></div>
-              )} */}
+      <div className="flex gap-4">
+        {/* Step 1 */}
+        <div className="flex flex-col items-center">
+          <div className="w-14 h-14 rounded-xl bg-purple-400 flex items-center justify-center shadow-lg text-white">
+            <CiSearch />
           </div>
-        ))}
+          <div className="pt-5">
+            <h3 className="text-lg font-semibold">Discover Skills</h3>
+          </div>
+        </div>
+
+        {/* Dotted Line */}
+        <div className="flex items-center">
+          <div className="w-3 h-3 bg-purple-400 rounded-full"></div>
+          <div className="w-24 border-t border-dashed border-gray-300"></div>
+          <div className="w-3 h-3 bg-cyan-400 rounded-full"></div>
+        </div>
+
+        {/* Step 2 */}
+        <div className="flex flex-col items-center">
+          <div className="w-14 h-14 rounded-xl bg-cyan-400 flex items-center justify-center shadow-lg text-white">
+            <PiSwapDuotone className="rotate-3" />
+          </div>
+
+          <div className="pt-5">
+            <h3 className="text-lg font-semibold">Connect & Swap</h3>
+          </div>
+        </div>
+
+        {/* Dotted Line */}
+        <div className="flex items-center">
+          <div className="w-3 h-3 bg-cyan-400 rounded-full"></div>
+          <div className="w-24 border-t border-dashed border-gray-300"></div>
+          <div className="w-3 h-3 bg-purple-400 rounded-full"></div>
+        </div>
+
+        {/* Step 3 */}
+        <div className="flex flex-col items-center">
+          <div className="w-14 h-14 rounded-xl bg-pink-300 flex items-center justify-center shadow-lg text-white">
+            <FaRegLightbulb />
+          </div>
+
+          <div className="pt-5">
+            <h3 className="text-lg font-semibold">Learn & Grow</h3>
+          </div>
+        </div>
       </div>
     </section>
   );

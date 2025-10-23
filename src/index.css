@@ -24,7 +24,7 @@
 
 body {
   font-family: "Montserrat", sans-serif;
-  background: #f7fafc;
+  background: #f7fafc60;
   max-width: 1200px;
   margin: 25px auto;
   padding: 1.5rem;
@@ -39,4 +39,9 @@ body {
   height: 6px;
   border-radius: 3px;
   background: linear-gradient(90deg, #1fe6d9, #a3bfc8);
+}
+
+button {
+  box-shadow: none;
+  border: none;
 }

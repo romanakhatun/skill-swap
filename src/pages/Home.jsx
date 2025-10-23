@@ -1,4 +1,5 @@
 import Banner from "../components/Banner";
+import BecomeInstructor from "../components/BecomeInstructor";
 import { HowItWorks } from "../components/HowItWorks";
 import PopularSkills from "../components/PopularSkills";
 import TopRatedProviders from "../components/TopRatedProviders";
@@ -12,8 +13,9 @@ const Home = () => {
       <div className="my-10">
         <PopularSkills />
       </div>
-      {/* <HowItWorks /> */}
-      <TopRatedProviders />
+      <HowItWorks />
+      <BecomeInstructor />
+      {/* <TopRatedProviders /> */}
     </>
   );
 };
