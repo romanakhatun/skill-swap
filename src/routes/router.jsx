@@ -9,6 +9,7 @@ import ErrorPage from "../pages/ErrorPage";
 import MyProfile from "../pages/MyProfile";
 import PrivateRoute from "../components/PrivateRoute";
 import UpdateProfile from "../pages/UpdateProfile";
+import Loading from "../components/Loading";
 
 export const router = createBrowserRouter([
   {
@@ -19,6 +20,7 @@ export const router = createBrowserRouter([
         path: "",
         element: <Home />,
         loader: () => fetch("/skills.json"),
+        hydrateFallbackElement: <Loading />,
       },
       {
         path: "/register",
@@ -44,6 +46,7 @@ export const router = createBrowserRouter([
           </PrivateRoute>
         ),
         loader: () => fetch("/skills.json"),
+        hydrateFallbackElement: <Loading />,
       },
       {
         path: "my-profile",

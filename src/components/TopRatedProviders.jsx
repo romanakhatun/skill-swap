@@ -14,21 +14,21 @@ const TopRatedProviders = () => {
       id: 2,
       name: "James Carter",
       image:
-        "https://images.pexels.com/photos/5917854/pexels-photo-5917854.jpeg?_gl=1*nhfg93*_ga*MTIyMTQ0NjIwNi4xNzUzNTQ5MDE2*_ga_8JE65Q40S6*czE3NjEyNDU5MjUkbzEzJGcxJHQxNzYxMjQ2MzY0JGo2MCRsMCRoMA..",
+        "https://plus.unsplash.com/premium_photo-1661517372580-29d0cf3cbde4?ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&q=80&w=871",
       expertise: "Junior Instructor",
     },
     {
       id: 3,
       name: "Sophia Kim",
       image:
-        "https://images.pexels.com/photos/1587009/pexels-photo-1587009.jpeg?_gl=1*zorc4o*_ga*MTIyMTQ0NjIwNi4xNzUzNTQ5MDE2*_ga_8JE65Q40S6*czE3NjEyNDU5MjUkbzEzJGcxJHQxNzYxMjQ2NDQ0JGo1MCRsMCRoMA..",
+        "https://images.pexels.com/photos/7320695/pexels-photo-7320695.jpeg?_gl=1*176ws47*_ga*MTIyMTQ0NjIwNi4xNzUzNTQ5MDE2*_ga_8JE65Q40S6*czE3NjEyNzMzNjckbzE0JGcxJHQxNzYxMjczNDk1JGo4JGwwJGgw",
       expertise: "Junior Instructor",
     },
     {
       id: 4,
       name: "Arjun Mehta",
       image:
-        "https://plus.unsplash.com/premium_photo-1661517372580-29d0cf3cbde4?ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&q=80&w=871",
+        "https://images.pexels.com/photos/5917850/pexels-photo-5917850.jpeg?_gl=1*gmiwpr*_ga*MTIyMTQ0NjIwNi4xNzUzNTQ5MDE2*_ga_8JE65Q40S6*czE3NjEyNzMzNjckbzE0JGcxJHQxNzYxMjczOTUyJGoxNyRsMCRoMA..",
       expertise: "Junior Instructor",
     },
   ];

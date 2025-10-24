@@ -20,8 +20,8 @@ const SocialSignIn = () => {
         // redirect after login
         navigate(location.state || "/");
       })
-      .catch((error) => {
-        console.error(error);
+      .catch(() => {
+        // console.error(error);
         toast.error("Google Sign-In failed!", {
           duration: 3000,
           position: "top-right",

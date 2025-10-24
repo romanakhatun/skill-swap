@@ -1,16 +1,95 @@
-# React + Vite
+# 🧠 SkillSwap
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+**SkillSwap** is an interactive web platform that allows individuals to **offer, learn, and exchange skills** within their local community.  
+Whether it’s **guitar lessons, coding help, yoga training, or language exchange**, users can explore skills, connect with others, and grow together.
 
-Currently, two official plugins are available:
+---
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## Live Demo
 
-## React Compiler
+🔗 **Live URL:** [https://skill-swap-2004.web.app](#)
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+---
 
-## Expanding the ESLint configuration
+## Project Purpose
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+The goal of **SkillSwap** is to create a community-driven learning experience where people can:
+
+- Share their talents
+- Learn from others
+- Build meaningful local connections
+
+It’s a skill-sharing hub for modern learners and hobbyists alike.
+
+---
+
+## Key Features
+
+**User Authentication**
+
+- Registration, login and hosting via Firebase
+- Social login (Google / GitHub) support
+- Forgot Password and Update Profile functionality
+
+**Skill Management**
+
+- Browse available skills
+- View detailed skill descriptions, pricing, ratings, and instructors
+- Enroll in sessions with easy forms
+
+**Interactive UI**
+
+- Fully responsive and mobile-friendly layout
+- Smooth animations using AOS, React Spring, and Swiper
+- Dynamic navbar with user profile & logout
+
+**Instructor System**
+
+- Become an instructor and share your expertise
+- Update and manage your personal profile
+
+**Toast Notifications**
+
+- Real-time success and error feedback using `react-hot-toast`
+
+---
+
+## Tech Stack
+
+**Frontend:**
+
+- React 19
+- Tailwind CSS
+- DaisyUI
+- Swiper (carousel)
+
+**Backend / Auth:**
+
+- Firebase Authentication
+
+**Routing:**
+
+- React Router v7
+
+**UI Enhancements:**
+
+- React Icons
+- React Hot Toast
+- AOS / Animate.css / React Spring _(for animations)_
+
+---
+
+## NPM Packages Used
+
+```json
+"@tailwindcss/vite": "^4.1.14",
+"daisyui": "^5.3.7",
+"firebase": "^12.4.0",
+"react": "^19.1.1",
+"react-dom": "^19.1.1",
+"react-hot-toast": "^2.6.0",
+"react-icons": "^5.5.0",
+"react-router": "^7.9.4",
+"swiper": "^12.0.3",
+"tailwindcss": "^4.1.14"
+```

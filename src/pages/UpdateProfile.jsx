@@ -13,7 +13,7 @@ const UpdateProfile = () => {
 
     const name = e.target.name.value;
     const photo = e.target.photo.value;
-    console.log(name, photo);
+    // console.log(name, photo);
 
     //update profile
     const profile = {

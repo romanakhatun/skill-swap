@@ -18,8 +18,8 @@ const Login = () => {
     const password = e.target.password.value;
 
     signInUser(email, password)
-      .then((result) => {
-        console.log(result.user);
+      .then(() => {
+        // console.log(result.user);
         toast.success("Login successful!", {
           duration: 3000,
           position: "top-right",

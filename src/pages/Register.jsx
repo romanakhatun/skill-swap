@@ -55,7 +55,7 @@ const Register = () => {
 
     createUser(email, password)
       .then((result) => {
-        console.log(result.user);
+        // console.log(result.user);
         toast.success("Registration Successful", {
           duration: 3000,
           position: "top-right",
