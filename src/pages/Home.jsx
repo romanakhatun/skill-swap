@@ -14,8 +14,8 @@ const Home = () => {
         <PopularSkills />
       </div>
       <HowItWorks />
+      <TopRatedProviders />
       <BecomeInstructor />
-      {/* <TopRatedProviders /> */}
     </>
   );
 };

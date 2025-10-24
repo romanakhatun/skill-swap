@@ -11,7 +11,7 @@ const MainLayout = () => {
       </main>
 
       <div className="mt-15">
-        <div className="flex-grow h-px bg-gray-300"></div>
+        <div className="flex-grow h-px bg-base-300"></div>
         <Footer />
       </div>
     </div>
