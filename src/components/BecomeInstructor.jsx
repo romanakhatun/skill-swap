@@ -3,7 +3,10 @@ import { FaArrowRightLong } from "react-icons/fa6";
 const BecomeInstructor = () => {
   return (
     <div className="rounded-xl p-8 md:p-15 flex flex-col md:flex-row justify-between items-center gap-6 mt-10 bg-gradient-to-r from-[#fff7ef] to-[#fdfaf8]">
-      <div className="space-y-4 text-center md:text-left">
+      <div
+        className="space-y-4 text-center md:text-left"
+        data-aos="fade-up-right"
+      >
         <p className="text-[#e79c4e] font-medium text-[18px] tracking-wide">
           Become A Instructor
         </p>
@@ -13,7 +16,10 @@ const BecomeInstructor = () => {
         </h2>
       </div>
 
-      <button className="btn btn-primary px-6 py-1 rounded-lg">
+      <button
+        className="btn btn-primary px-6 py-1 rounded-lg"
+        data-aos="fade-up-left"
+      >
         Share Your Expertise
         <FaArrowRightLong className="ml-2" />
       </button>

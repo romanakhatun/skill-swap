@@ -7,7 +7,7 @@ Whether it’s **guitar lessons, coding help, yoga training, or language exchang
 
 ## Live Demo
 
-🔗 **Live URL:** [https://skill-swap-2004.web.app](#)
+🔗 **Live URL:** [https://skill-swap-2004.web.app/](#)
 
 ---
 
@@ -75,7 +75,7 @@ It’s a skill-sharing hub for modern learners and hobbyists alike.
 
 - React Icons
 - React Hot Toast
-- AOS / Animate.css / React Spring _(for animations)_
+- AOS _(for animations)_
 
 ---
 

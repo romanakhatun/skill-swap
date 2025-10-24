@@ -24,7 +24,10 @@ const Banner = () => {
   ];
 
   return (
-    <div className="w-full mx-auto rounded-2xl overflow-hidden shadow-xl">
+    <div
+      className="w-full mx-auto rounded-2xl overflow-hidden shadow-xl"
+      data-aos="zoom-in"
+    >
       <Swiper
         modules={[Pagination, EffectFade, Autoplay]}
         effect="fade"
@@ -47,9 +50,9 @@ const Banner = () => {
               style={{ backgroundImage: `url(${slide.img})` }}
             >
               <div className="absolute inset-0 bg-black/40"></div>
-              <div className="relative z-10 text-white px-8">
+              <div className="relative z-10 text-white px-8" data-aos="zoom-in">
                 <div className="line mb-3"></div>
-                <h2 className="text-3xl md:text-4xl font-bold ">
+                <h2 className="text-3xl md:text-4xl font-bold">
                   {slide.title}
                 </h2>
                 <h2 className="text-3xl md:text-4xl font-bold">
