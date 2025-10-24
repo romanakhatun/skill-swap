@@ -28,7 +28,7 @@ It’s a skill-sharing hub for modern learners and hobbyists alike.
 **User Authentication**
 
 - Registration, login and hosting via Firebase
-- Social login (Google / GitHub) support
+- Social login Google support
 - Forgot Password and Update Profile functionality
 
 **Skill Management**
