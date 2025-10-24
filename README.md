@@ -40,7 +40,7 @@ It’s a skill-sharing hub for modern learners and hobbyists alike.
 **Interactive UI**
 
 - Fully responsive and mobile-friendly layout
-- Smooth animations using AOS, React Spring, and Swiper
+- Smooth animations using AOS, and Swiper
 - Dynamic navbar with user profile & logout
 
 **Instructor System**
@@ -58,7 +58,7 @@ It’s a skill-sharing hub for modern learners and hobbyists alike.
 
 **Frontend:**
 
-- React 19
+- React
 - Tailwind CSS
 - DaisyUI
 - Swiper (carousel)
