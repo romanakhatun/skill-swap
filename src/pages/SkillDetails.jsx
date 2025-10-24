@@ -10,6 +10,10 @@ import {
 } from "react-icons/fa";
 import toast, { Toaster } from "react-hot-toast";
 import { AuthContext } from "../contexts/AuthContext";
+import { IoPersonOutline } from "react-icons/io5";
+import { TfiEmail } from "react-icons/tfi";
+import { LuTag } from "react-icons/lu";
+import { RiCalendarCheckLine } from "react-icons/ri";
 
 const SkillDetails = () => {
   const { user } = use(AuthContext);
@@ -62,13 +66,13 @@ const SkillDetails = () => {
 
   return (
     <div className="min-h-screen bg-base-200 flex flex-col gap-10 items-center justify-center py-10 px-4">
-      <div className="card lg:card-side bg-base-100 max-w-5xl w-full border border-base-300">
+      <div className="card md:card-side bg-base-100 max-w-5xl w-full border border-base-300">
         {/* Left Image */}
         <figure className="lg:w-1/2 w-full" data-aos="fade-right">
           <img
             src={image}
             alt={skillName}
-            className="w-full h-full object-cover rounded-l-xl"
+            className="w-full h-full object-cover"
           />
         </figure>
 
@@ -82,19 +86,20 @@ const SkillDetails = () => {
 
           <div className="space-y-2">
             <p className="flex items-center gap-2 text-sm text-gray-700">
-              <FaUser className="text-primary" /> <strong>Instructor:</strong>
+              <IoPersonOutline className="text-primary" />{" "}
+              <strong>Instructor:</strong>
               {providerName}
             </p>
             <p className="flex items-center gap-2 text-sm text-gray-700">
-              <FaEnvelope className="text-primary" /> <strong>Email:</strong>
+              <TfiEmail className="text-primary" /> <strong>Email:</strong>
               {providerEmail}
             </p>
             <p className="flex items-center gap-2 text-sm text-gray-700">
-              <FaTag className="text-primary" /> <strong>Category:</strong>
+              <LuTag className="text-primary" /> <strong>Category:</strong>
               {category}
             </p>
             <p className="flex items-center gap-2 text-sm text-gray-700">
-              <FaCalendarCheck className="text-primary" />
+              <RiCalendarCheckLine className="text-primary" />
               <strong>Slots Available:</strong> {slotsAvailable}
             </p>
           </div>
@@ -106,15 +111,9 @@ const SkillDetails = () => {
               <span className="font-semibold">{rating}</span>
             </div>
 
-            <div className="text-lg font-bold flex items-center gap-1 text-green-600">
+            <div className="text-lg font-bold flex items-center gap-1 text-primary">
               <FaDollarSign /> {price}
             </div>
-          </div>
-
-          <div className="card-actions justify-end mt-6">
-            <button className="btn btn-primary w-full lg:w-auto">
-              Book Session
-            </button>
           </div>
         </div>
       </div>

@@ -97,7 +97,7 @@ const Register = () => {
           <div className="border-b border-base-300 mb-6"></div>
 
           <form onSubmit={handleRegister} className="space-y-5 mr-8">
-            {/* Input Fields */}
+            {/* Name Fields */}
             <div>
               <label className="label text-sm font-semibold">
                 Your Name <span className="text-red-500">*</span>
@@ -111,6 +111,7 @@ const Register = () => {
               />
             </div>
 
+            {/* Photo URL Fields */}
             <div>
               <label className="label text-sm font-semibold">
                 Photo URL <span className="text-red-500">*</span>
@@ -124,6 +125,7 @@ const Register = () => {
               />
             </div>
 
+            {/* Email Fields */}
             <div>
               <label className="label text-sm font-semibold">
                 Email address <span className="text-red-500">*</span>
@@ -137,6 +139,7 @@ const Register = () => {
               />
             </div>
 
+            {/* Password Fields */}
             <div>
               <label className="label text-sm font-semibold">
                 Password <span className="text-red-500">*</span>
@@ -157,6 +160,7 @@ const Register = () => {
               </label>
             </div>
 
+            {/* Terms and condition Fields */}
             <div className="flex items-center gap-2">
               <input
                 type="checkbox"

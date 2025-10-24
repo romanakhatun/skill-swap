@@ -14,6 +14,7 @@ const MyProfile = () => {
       <div className="flex items-center justify-center p-6">
         <div className="card w-full ">
           <div className="flex flex-col items-center text-center space-y-4">
+            {/* Profile Photo */}
             {user?.photoURL ? (
               <img
                 src={user?.photoURL || admin}
@@ -25,9 +26,11 @@ const MyProfile = () => {
             )}
 
             <div className="space-y-2 animate__animated animate__fadeInUp">
+              {/* Display Name */}
               <h2 className="text-2xl font-bold text-gray-800">
                 {user?.displayName || "Anonymous User"}
               </h2>
+
               <p className="text-gray-600 flex items-center justify-center gap-2">
                 <MdOutlineMail />
                 {user?.email || "No Email Provided"}
