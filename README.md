@@ -7,7 +7,7 @@ Whether it’s **guitar lessons, coding help, yoga training, or language exchang
 
 ## Live Demo
 
-🔗 **Live URL:** [https://skill-swap-2004.web.app/](#)
+🔗 **Live URL:** [https://skill-swap-2004.web.app/](https://skill-swap-2004.web.app/)
 
 ---
 
