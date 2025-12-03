@@ -6,7 +6,7 @@ export const HowItWorks = () => {
   return (
     <section
       className="flex flex-col items-center justify-center py-10"
-      data-aos="fade-up"
+      // data-aos="fade-up"
     >
       <h2 className="text-2xl md:text-3xl font-semibold text-[#2C3E50] mb-15 mt-5">
         How It Works

@@ -82,7 +82,7 @@ const Register = () => {
   return (
     <>
       <title>{`Skill Swap | Join SkillSwap`}</title>
-      <div className="flex justify-center items-center mt-10 bg-base-200">
+      <div className="flex justify-center items-center mt-10">
         <div className="rounded-xl w-full max-w-md bg-base-100 p-8 border border-base-300">
           <Toaster
             containerStyle={{

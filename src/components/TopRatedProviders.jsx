@@ -36,7 +36,7 @@ const TopRatedProviders = () => {
   return (
     <div className="mt-15 mb-15">
       <div className="flex flex-col gap-5 justify-center xl:flex-row items-center">
-        <div className="xl:ml-20 flex-1 max-w-xl" data-aos="fade-right">
+        <div className="xl:ml-20 flex-1 max-w-xl">
           <span className="text-xs font-bold bg-[#e79d4e62] text-[#b45f04] rounded px-4 py-1 uppercase">
             Our Instructor
           </span>
@@ -60,10 +60,7 @@ const TopRatedProviders = () => {
             </button>
           </div>
         </div>
-        <div
-          className="grid grid-cols-1 sm:grid-cols-2 gap-7 flex-1"
-          data-aos="fade-left"
-        >
+        <div className="grid grid-cols-1 sm:grid-cols-2 gap-7 flex-1">
           {Instructors.map((instructor) => (
             <div
               key={instructor.id}

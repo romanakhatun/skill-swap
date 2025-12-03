@@ -68,7 +68,10 @@ const SkillDetails = () => {
     <div className="min-h-screen bg-base-200 flex flex-col gap-10 items-center justify-center py-10 px-4">
       <div className="card md:card-side bg-base-100 max-w-5xl w-full border border-base-300">
         {/* Left Image */}
-        <figure className="lg:w-1/2 w-full" data-aos="fade-right">
+        <figure
+          className="lg:w-1/2 w-full"
+          // data-aos="fade-right"
+        >
           <img
             src={image}
             alt={skillName}
@@ -77,7 +80,10 @@ const SkillDetails = () => {
         </figure>
 
         {/* Right Details */}
-        <div className="card-body lg:w-1/2 space-y-4" data-aos="fade-left">
+        <div
+          className="card-body lg:w-1/2 space-y-4"
+          // data-aos="fade-left"
+        >
           <h2 className="card-title text-2xl font-bold text-primary">
             {skillName}
           </h2>
@@ -120,7 +126,7 @@ const SkillDetails = () => {
       {/* Enroll Form */}
       <div
         className="card bg-base-100 shadow-md w-full max-w-md p-8 border border-base-300"
-        data-aos="fade-up"
+        // data-aos="fade-up"
       >
         <Toaster
           containerStyle={{

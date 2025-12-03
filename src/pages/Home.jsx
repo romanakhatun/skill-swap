@@ -10,7 +10,10 @@ const Home = () => {
       <div className="my-7">
         <Banner />
       </div>
-      <div className="my-10" data-aos="zoom-in-up">
+      <div
+        className="my-10"
+        // data-aos="zoom-in-up"
+      >
         <PopularSkills />
       </div>
       <HowItWorks />
