@@ -52,11 +52,7 @@ export const router = createBrowserRouter([
       },
       {
         path: "/skill-details/:id",
-        element: (
-          <PrivateRoute>
-            <SkillDetails />
-          </PrivateRoute>
-        ),
+        element: <SkillDetails />,
         loader: () => fetch("/skills.json"),
         hydrateFallbackElement: <Loading />,
       },

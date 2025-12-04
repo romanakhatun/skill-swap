@@ -45,13 +45,13 @@ const Navbar = () => {
 
   return (
     <header className="sticky top-0 z-50 bg-white">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div className="max-w-7xl mx-auto px-4 lg:px-5">
         <div className="flex justify-between items-center h-16">
           {/* Logo */}
           <Logo />
 
           {/* Desktop Navigation */}
-          <nav className="hidden md:block">
+          <nav className="hidden lg:block">
             <ul className="flex items-center gap-6 text-[#2C3E50]">
               {navLinks.map((link) => (
                 <li key={link.name}>
@@ -63,7 +63,7 @@ const Navbar = () => {
 
               {user ? (
                 // Desktop Profile Dropdown
-                <div className="dropdown dropdown-end ml-2 hidden md:block">
+                <div className="dropdown dropdown-end ml-2 hidden lg:block">
                   <label tabIndex={0} className="cursor-pointer">
                     <div
                       className="tooltip tooltip-left"
@@ -120,7 +120,7 @@ const Navbar = () => {
           </nav>
 
           {/* Mobile Menu Button */}
-          <div className="md:hidden flex items-center">
+          <div className="lg:hidden flex items-center">
             <button
               onClick={toggleMenu}
               className="p-2 text-gray-600 rounded-md hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-inset focus:ring-blue-500"
@@ -138,7 +138,7 @@ const Navbar = () => {
 
       {/* Mobile Menu Content */}
       <div
-        className={`md:hidden absolute top-16 left-0 w-full bg-base-100 border border-base-300 rounded-box shadow-2xl transition-all duration-300 ease-in-out ${
+        className={`lg:hidden absolute top-16 left-0 w-full bg-base-100 border border-base-300 rounded-box shadow-2xl transition-all duration-300 ease-in-out ${
           isMenuOpen
             ? "max-h-screen opacity-100"
             : "max-h-0 opacity-0 overflow-hidden"
