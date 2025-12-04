@@ -3,6 +3,7 @@ import { Pagination, EffectFade, Autoplay } from "swiper/modules";
 import "swiper/css";
 import "swiper/css/effect-fade";
 import "swiper/css/pagination";
+import { Link } from "react-router";
 
 const Banner = () => {
   const slides = [
@@ -61,9 +62,12 @@ const Banner = () => {
                 <h2 className="text-3xl md:text-4xl font-bold">
                   {slide.subtitle}
                 </h2>
-                <button className="btn mt-6 rounded-full border-none shadow-none btn-gradient text-white px-8">
+                <Link
+                  to={"/all-course"}
+                  className="btn mt-6 rounded-full border-none shadow-none btn-gradient text-white px-8"
+                >
                   Explore Skills
-                </button>
+                </Link>
               </div>
             </div>
           </SwiperSlide>

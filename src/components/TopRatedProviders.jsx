@@ -1,5 +1,6 @@
 import { FaShareAlt } from "react-icons/fa";
 import { FaArrowRight } from "react-icons/fa6";
+import { Link } from "react-router";
 
 const TopRatedProviders = () => {
   const Instructors = [
@@ -51,13 +52,19 @@ const TopRatedProviders = () => {
             you achieve your goals.
           </p>
           <div className="flex gap-2 mt-2">
-            <button className="btn btn-neutral text-white rounded-full">
+            <Link
+              to="/contact"
+              className="btn btn-neutral text-white rounded-full"
+            >
               Contact Us <FaArrowRight />
-            </button>
-            <button className="btn btn-primary rounded-full text-white  px-4">
+            </Link>
+            <Link
+              to={"all-course"}
+              className="btn btn-primary rounded-full text-white  px-4"
+            >
               Find Course
               <FaArrowRight />
-            </button>
+            </Link>
           </div>
         </div>
         <div className="grid grid-cols-1 sm:grid-cols-2 gap-7 flex-1">

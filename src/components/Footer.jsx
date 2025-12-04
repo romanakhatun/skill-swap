@@ -45,14 +45,14 @@ const Footer = () => {
         <nav>
           <h6 className="footer-title text-primary-accent">Social Links</h6>
           <div className="grid grid-flow-col gap-3">
-            <a href="https://twitter.com" className="text-2xl text-[#e79c4e]">
-              <FaTwitter />
+            <a href="https://instagram.com" className="text-2xl text-[#e79c4e]">
+              <FaInstagram />
             </a>
             <a href="https://facebook.com" className="text-2xl text-[#e79c4e]">
               <FaFacebook />
             </a>
-            <a href="https://instagram.com" className="text-2xl text-[#e79c4e]">
-              <FaInstagram />
+            <a href="https://twitter.com" className="text-2xl text-[#e79c4e]">
+              <FaTwitter />
             </a>
           </div>
         </nav>

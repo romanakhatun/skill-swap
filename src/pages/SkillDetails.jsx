@@ -1,13 +1,6 @@
-import React, { use, useEffect, useState } from "react";
+import { use, useEffect, useState } from "react";
 import { useLoaderData, useParams } from "react-router";
-import {
-  FaStar,
-  FaEnvelope,
-  FaUser,
-  FaTag,
-  FaDollarSign,
-  FaCalendarCheck,
-} from "react-icons/fa";
+import { FaStar, FaDollarSign } from "react-icons/fa";
 import toast, { Toaster } from "react-hot-toast";
 import { AuthContext } from "../contexts/AuthContext";
 import { IoPersonOutline } from "react-icons/io5";
