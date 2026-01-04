@@ -151,17 +151,6 @@ const Navbar = () => {
 
           {user ? (
             <div className="pt-4 mt-4 border-t border-base-300 space-y-2">
-              <div className="flex items-center gap-3 px-4 py-2">
-                <img
-                  className="h-10 w-10 object-cover rounded-full border-2 border-primary"
-                  src={user?.photoURL || admin}
-                  alt="Avatar"
-                />
-                <span className="font-bold text-base-content">
-                  {user?.displayName}
-                </span>
-              </div>
-
               <NavLink
                 to="/my-profile"
                 className={mobileNavLinkClass}

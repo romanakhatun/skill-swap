@@ -46,7 +46,7 @@ const DashboardLayout = () => {
       <aside className="drawer-side">
         <label htmlFor="dashboard-drawer" className="drawer-overlay"></label>
 
-        <div className="w-64 bg-base-100 flex flex-col">
+        <div className="w-64 bg-base-100 flex flex-col min-h-full">
           {/* Sidebar Header */}
           <div className="px-6 py-4 border-b text-lg font-bold">Dashboard</div>
 

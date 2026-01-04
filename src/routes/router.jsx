@@ -17,6 +17,7 @@ import DashboardLayout from "../layouts/DashboardLayout";
 import DashboardHome from "../pages/dashboard/DashboardHome";
 import MyCourses from "../pages/dashboard/MyCourses";
 import AddCourse from "../pages/dashboard/AddCourse";
+import UpdateCourse from "../pages/dashboard/UpdateCourse";
 
 export const router = createBrowserRouter([
   {
@@ -100,6 +101,10 @@ export const router = createBrowserRouter([
       {
         path: "add-course",
         element: <AddCourse />,
+      },
+      {
+        path: "update-course/:id",
+        element: <UpdateCourse />,
       },
       {
         path: "profile",
