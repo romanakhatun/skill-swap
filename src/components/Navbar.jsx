@@ -2,7 +2,7 @@ import { useState } from "react";
 import { use } from "react";
 import { NavLink } from "react-router";
 import { AuthContext } from "../contexts/AuthContext";
-import { FiLogOut } from "react-icons/fi";
+import { FiHome, FiLogOut } from "react-icons/fi";
 import { GoPerson } from "react-icons/go";
 import { HiMenu, HiX } from "react-icons/hi";
 import admin from "../assets/admin.png";
@@ -85,6 +85,14 @@ const Navbar = () => {
                         <GoPerson size={20} /> Profile
                       </NavLink>
                     </li>
+                    <li>
+                      <NavLink
+                        to="/dashboard"
+                        className="flex items-center gap-2 hover:text-primary"
+                      >
+                        <FiHome /> Dashboard
+                      </NavLink>
+                    </li>
                     <li onClick={handleLogOut}>
                       <span className="flex items-center gap-2 text-error hover:bg-error/10">
                         <FiLogOut size={20} /> Logout
@@ -140,6 +148,65 @@ const Navbar = () => {
               {link.name}
             </NavLink>
           ))}
+
+          {user ? (
+            <div className="pt-4 mt-4 border-t border-base-300 space-y-2">
+              <div className="flex items-center gap-3 px-4 py-2">
+                <img
+                  className="h-10 w-10 object-cover rounded-full border-2 border-primary"
+                  src={user?.photoURL || admin}
+                  alt="Avatar"
+                />
+                <span className="font-bold text-base-content">
+                  {user?.displayName}
+                </span>
+              </div>
+
+              <NavLink
+                to="/my-profile"
+                className={mobileNavLinkClass}
+                onClick={() => setIsMenuOpen(false)}
+              >
+                <div className="flex items-center gap-2">
+                  <GoPerson size={20} /> Profile
+                </div>
+              </NavLink>
+
+              <NavLink
+                to="/dashboard"
+                className={mobileNavLinkClass}
+                onClick={() => setIsMenuOpen(false)}
+              >
+                <div className="flex items-center gap-2">
+                  <FiHome /> Dashboard
+                </div>
+              </NavLink>
+
+              <button
+                onClick={handleLogOut}
+                className="w-full text-left px-4 py-2 rounded-lg text-lg font-medium text-error hover:bg-error/10 flex items-center gap-2"
+              >
+                <FiLogOut size={20} /> Logout
+              </button>
+            </div>
+          ) : (
+            <div className="pt-4 mt-4 border-t border-base-300 grid grid-cols-2 gap-2">
+              <NavLink
+                to="/login"
+                className={mobileNavLinkClass}
+                onClick={() => setIsMenuOpen(false)}
+              >
+                Login
+              </NavLink>
+              <NavLink
+                to="/register"
+                className={mobileNavLinkClass}
+                onClick={() => setIsMenuOpen(false)}
+              >
+                Register
+              </NavLink>
+            </div>
+          )}
         </div>
       </div>
     </header>

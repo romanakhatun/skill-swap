@@ -13,6 +13,10 @@ import Loading from "../components/Loading";
 import AllCourse from "../pages/AllCourse";
 import Contact from "../pages/Contact";
 import AboutUs from "../pages/AboutUs";
+import DashboardLayout from "../layouts/DashboardLayout";
+import DashboardHome from "../pages/dashboard/DashboardHome";
+import MyCourses from "../pages/dashboard/MyCourses";
+import AddCourse from "../pages/dashboard/AddCourse";
 
 export const router = createBrowserRouter([
   {
@@ -22,7 +26,6 @@ export const router = createBrowserRouter([
       {
         path: "",
         element: <Home />,
-        loader: () => fetch("/skills.json"),
         hydrateFallbackElement: <Loading />,
       },
       {
@@ -75,6 +78,32 @@ export const router = createBrowserRouter([
       {
         path: "*",
         element: <ErrorPage />,
+      },
+    ],
+  },
+  {
+    path: "/dashboard",
+    element: (
+      <PrivateRoute>
+        <DashboardLayout />
+      </PrivateRoute>
+    ),
+    children: [
+      {
+        index: true,
+        element: <DashboardHome />,
+      },
+      {
+        path: "my-courses",
+        element: <MyCourses />,
+      },
+      {
+        path: "add-course",
+        element: <AddCourse />,
+      },
+      {
+        path: "profile",
+        element: <MyProfile />,
       },
     ],
   },

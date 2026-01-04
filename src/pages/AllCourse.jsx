@@ -1,15 +1,28 @@
-import { useLoaderData } from "react-router";
+import { useQuery } from "@tanstack/react-query"; // Use TanStack Query
+import useAxios from "../hooks/useAxios"; // Your custom axios hook
 import SkillCard from "../components/SkillCard";
 import { useState, useMemo } from "react";
 
 const AllCourse = () => {
-  const initialData = useLoaderData();
+  const axiosInstance = useAxios();
   const [searchTerm, setSearchTerm] = useState("");
   const [sortOption, setSortOption] = useState("none");
 
+  const { data, isLoading } = useQuery({
+    queryKey: ["allCourses"],
+    queryFn: async () => {
+      const res = await axiosInstance.get("/all-courses");
+      return res.data;
+    },
+  });
+
+  const initialData = data?.result || [];
+
   const filteredAndSortedData = useMemo(() => {
     let processedData = [...initialData].filter((skill) =>
-      skill.skillName.toLowerCase().includes(searchTerm.toLowerCase())
+      (skill.courseName || skill.skillName || "")
+        .toLowerCase()
+        .includes(searchTerm.toLowerCase())
     );
 
     if (sortOption !== "none") {
@@ -25,6 +38,14 @@ const AllCourse = () => {
     }
     return processedData;
   }, [initialData, searchTerm, sortOption]);
+
+  if (isLoading) {
+    return (
+      <div className="flex justify-center items-center min-h-screen">
+        <span className="loading loading-spinner loading-lg text-primary"></span>
+      </div>
+    );
+  }
 
   return (
     <div className="my-10 px-4 transition-colors duration-300">
@@ -43,7 +64,6 @@ const AllCourse = () => {
 
       {/* --- Search and Sort Controls Container --- */}
       <div className="flex flex-col md:flex-row gap-4 mb-10 items-center bg-base-200 p-6 rounded-2xl border border-base-300 shadow-sm">
-        {/* Theme-Aware Search Input */}
         <div className="relative flex-grow w-full">
           <input
             type="text"
@@ -54,7 +74,6 @@ const AllCourse = () => {
           />
         </div>
 
-        {/* Theme-Aware Sorting Dropdown */}
         <select
           value={sortOption}
           onChange={(e) => setSortOption(e.target.value)}
@@ -71,7 +90,7 @@ const AllCourse = () => {
       {/* Course Cards Grid */}
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6">
         {filteredAndSortedData.map((skill) => (
-          <SkillCard key={skill.skillId} skill={skill} />
+          <SkillCard key={skill._id} skill={skill} />
         ))}
       </div>
 

@@ -19,7 +19,7 @@ const MainLayout = () => {
   }, []);
 
   return (
-    <div>
+    <div className="max-w-[1200px] mx-auto p-6">
       <Navbar />
       <main className="min-h-screen">
         {state == "loading" ? <Loading /> : <Outlet />}
