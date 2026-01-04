@@ -46,7 +46,7 @@ const ForgotPassword = () => {
         </h1>
         <div className="border-b border-base-300 mb-6"></div>
 
-        <form onSubmit={handleResetPassword} className="space-y-5 mr-8">
+        <form onSubmit={handleResetPassword} className="space-y-5">
           {/* Email Field */}
           <div>
             <label className="label text-primary-accent font-semibold text-sm">
@@ -71,7 +71,7 @@ const ForgotPassword = () => {
 
         {/* Register Link */}
         <p className="text-center text-sm mt-4">
-          Remembered your password?
+          Remembered your password?{" "}
           <Link to="/login" className="text-primary font-semibold">
             Back to Login
           </Link>

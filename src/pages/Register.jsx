@@ -96,7 +96,7 @@ const Register = () => {
           </h1>
           <div className="border-b border-base-300 mb-6"></div>
 
-          <form onSubmit={handleRegister} className="space-y-5 mr-8">
+          <form onSubmit={handleRegister} className="space-y-5">
             {/* Name Fields */}
             <div>
               <label className="label text-sm font-semibold">
@@ -184,7 +184,7 @@ const Register = () => {
           <SocialSignIn />
 
           <p className="text-center text-sm">
-            Have an account?
+            Have an account?{" "}
             <Link to="/login" className="text-primary font-semibold">
               Login
             </Link>

@@ -57,7 +57,7 @@ const Login = () => {
           </h1>
           <div className="border-b border-base-300 mb-6"></div>
 
-          <form onSubmit={handleSignIn} className="space-y-5 mr-8">
+          <form onSubmit={handleSignIn} className="space-y-5">
             {/* Email Field */}
             <div>
               <label className="label text-primary-accent font-semibold text-sm">
@@ -123,7 +123,7 @@ const Login = () => {
 
           {/* Register Link */}
           <p className="text-center text-sm">
-            Don’t Have An Account?
+            Don’t Have An Account?{" "}
             <Link to="/register" className="text-primary font-semibold">
               Register
             </Link>
