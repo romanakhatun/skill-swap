@@ -41,7 +41,7 @@ const TopRatedProviders = () => {
           <span className="text-xs font-bold bg-[#e79d4e62] text-[#b45f04] rounded px-4 py-1 uppercase">
             Our Instructor
           </span>
-          <h2 className="text-2xl md:text-3xl font-semibold text-[#2C3E50] mb-2 mt-3">
+          <h2 className="text-2xl md:text-3xl font-semibold text-base-content mb-2 mt-3">
             Meet Our Expert Instructor
           </h2>
           <p>

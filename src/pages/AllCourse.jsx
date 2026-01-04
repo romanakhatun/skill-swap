@@ -4,10 +4,7 @@ import { useState, useMemo } from "react";
 
 const AllCourse = () => {
   const initialData = useLoaderData();
-
-  // State for the search term
   const [searchTerm, setSearchTerm] = useState("");
-
   const [sortOption, setSortOption] = useState("none");
 
   const filteredAndSortedData = useMemo(() => {

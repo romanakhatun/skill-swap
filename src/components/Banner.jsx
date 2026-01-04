@@ -25,7 +25,7 @@ const Banner = () => {
   ];
 
   return (
-    <div
+    <section
       className="w-full mx-auto rounded-2xl overflow-hidden shadow-xl"
       // data-aos="zoom-in"
     >
@@ -42,12 +42,12 @@ const Banner = () => {
           delay: 4000,
           disableOnInteraction: false,
         }}
-        className="mySwiper"
+        className="mySwiper h-[60vh] md:h-[70vh]"
       >
         {slides.map((slide, index) => (
           <SwiperSlide key={index}>
             <div
-              className="relative h-[350px] flex items-center justify-start bg-cover bg-center"
+              className="relative h-full flex items-center justify-start bg-cover bg-center"
               style={{ backgroundImage: `url(${slide.img})` }}
             >
               <div className="absolute inset-0 bg-black/40"></div>
@@ -73,7 +73,7 @@ const Banner = () => {
           </SwiperSlide>
         ))}
       </Swiper>
-    </div>
+    </section>
   );
 };
 
