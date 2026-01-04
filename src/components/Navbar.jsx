@@ -26,7 +26,6 @@ const Navbar = () => {
       .catch((err) => console.log(err.message));
   };
 
-  // CLEANED UP CLASSES FOR THEMES
   const baseNavLinkClass = ({ isActive }) =>
     `font-semibold transition-colors duration-200 ${
       isActive
@@ -141,7 +140,6 @@ const Navbar = () => {
               {link.name}
             </NavLink>
           ))}
-          {/* ... User profile logic for mobile (apply same theme-aware classes) */}
         </div>
       </div>
     </header>

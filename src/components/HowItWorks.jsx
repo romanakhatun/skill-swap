@@ -8,9 +8,13 @@ export const HowItWorks = () => {
       className="flex flex-col items-center justify-center py-10"
       // data-aos="fade-up"
     >
-      <h2 className="text-2xl md:text-3xl font-semibold text-base-content mb-15 mt-5">
-        How It Works
-      </h2>
+      <div className="mb-15">
+        <h2 className="text-2xl md:text-3xl font-semibold text-base-content mt-5">
+          How It Works
+        </h2>
+
+        <div className="line mx-auto mt-2"></div>
+      </div>
 
       <div className="flex gap-6 flex-col sm:flex-row">
         {/* Step 1 */}
